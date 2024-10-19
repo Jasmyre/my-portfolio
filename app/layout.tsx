@@ -19,7 +19,11 @@ const geistMono = localFont({
 });
 
 const BASE_URL =
-  process.env.BASE_URL || "err:Envronment_Variable_Is_Not_Defined";
+  process.env.BASE_URL || "err:Envronment_'BASE_URL'_Variable_Is_Not_Defined";
+
+const GOOGLE_SITE_VERIFICATION =
+  process.env.GOOGLE_SITE_VERIFICATION ||
+  "err:Envronment_'GOOGLE_SITE_VERIFICATION'_Variable_Is_Not_Defined";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -55,12 +59,13 @@ export const metadata: Metadata = {
     description:
       "My personal website portfolio: Minimalist Web Designer & Programmer; I create simple, clean, and efficient web solutions. I'm a web designer and programmer with a focus on creating minimal and functional websites that enhance user experience.",
   },
-  // other: {
-  //   "google-site-verification": "Z_jFqVnsRqmwaQwrIPd9ey7fdRY4tunPiojllRX0yI0",
-  // },
+  other: {
+    "google-site-verification": GOOGLE_SITE_VERIFICATION,
+  },
 };
 
 console.log(BASE_URL);
+console.log(GOOGLE_SITE_VERIFICATION);
 
 export default function RootLayout({
   children,

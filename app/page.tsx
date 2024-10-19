@@ -3,7 +3,7 @@ import Header from "@/components/template/header/Header";
 import HeroSection from "@/components/home/hero-section/HeroSection";
 import AboutSection from "../components/home/about-section/AboutSection";
 import SolutionSection from "@/components/home/solution-section/SolutionSection";
-import PortfolioSection from '@/components/home/portfolio-section/PortfolioSection';
+import PortfolioSection from "@/components/home/portfolio-section/PortfolioSection";
 
 const Home = () => {
   return (
