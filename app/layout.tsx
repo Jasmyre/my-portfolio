@@ -5,7 +5,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 import { ThemeProvider } from "@/components/theme-provider";
-import FollowCursor from '../components/FollowCursur';
+import FollowCursor from "../components/FollowCursur";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -19,7 +19,7 @@ const geistMono = localFont({
 });
 
 const BASE_URL =
-  process.env.Base_URL ?? "err:Envronment_Variable_Is_Not_Defined";
+  process.env.Base_URL || "err:Envronment_Variable_Is_Not_Defined";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
