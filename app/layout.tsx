@@ -18,10 +18,8 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-// const BASE_URL =
-//   process.env.Base_URL || "err:Envronment_Variable_Is_Not_Defined";
-
-const BASE_URL = process.env.Base_URL || "https://example.com";
+const BASE_URL =
+  process.env.Base_URL || "err:Envronment_Variable_Is_Not_Defined";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -74,7 +72,7 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="light"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
