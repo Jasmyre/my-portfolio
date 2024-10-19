@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animation-timeline-view {
+    animation-timeline: view(15% 5%);
+  }
+
+  .section {
+    @apply max-w-screen-xl mx-auto px-6 py-20;
+  }
+
+  .bg-box {
+    @apply border-x bg-[linear-gradient(to_right,_hsl(var(--border))_1px,_transparent_1px),_linear-gradient(to_bottom,_hsl(var(--border))_1px,_transparent_1px)] bg-[length:200px_200px] bg-center;
+  }
+
+  .darken-bg {
+    @apply after:content-[''] after:absolute after:w-full after:h-full after:bg-[rgba(0,_0,_0,_0.25)] dark:after:bg-[rgba(0,_0,_0,_0.75)] after:top-0 after:left-0 relative;
+  }
+
+  .underline-hover {
+    @apply hover:after:w-full after:transition-all after:duration-100 after:content-[''] after:w-0 after:h-[1px] after:bg-primary;
+  }
+}
+
+html {
+  scroll-padding-top: 5rem;
+  scroll-behavior: smooth;
+}
+
+/* Default */
+/* @layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 0 0% 40%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 12%;
+    --foreground: 0 0% 88%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+} */
+
+@layer base {
+  :root {
+    --background: 0 0% 96%; /* Slightly darker for better contrast */
+    --foreground: 0 0% 25%; /* Darker for improved readability */
+    --card: 0 0% 100%; /* Pure white */
+    --card-foreground: 0 0% 10%; /* Darker for readability */
+    --popover: 0 0% 100%; /* Same as card */
+    --popover-foreground: 0 0% 10%; /* Consistent with card foreground */
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 0 0% 92%; /* Same as secondary */
+    --muted-foreground: 0 0% 40%; /* Darker for better visibility */
+    --accent: 0 0% 92%; /* Same as secondary for consistency */
+    --accent-foreground: 0 0% 15%; /* Matches primary foreground */
+    --destructive: 0 84% 60%; /* Bright red for alerts */
+    --destructive-foreground: 0 0% 98%; /* White for better contrast */
+    --border: 0 0% 85%; /* Light gray for subtle borders */
+    --input: 0 0% 85%; /* Same as border for consistency */
+    --ring: 0 0% 25%; /* Darker ring for focus states */
+    --chart-1: 12 76% 55%; /* Slightly muted chart color */
+    --chart-2: 173 58% 35%; /* Softer green */
+    --chart-3: 197 37% 20%; /* Softer blue */
+    --chart-4: 43 74% 60%; /* Muted yellow */
+    --chart-5: 27 87% 60%; /* Muted orange */
+    --radius: 0.5rem; /* Consistent border radius */
+    --border: 0 0% 85%; /* Light gray for subtle borders */
+    --input: 0 0% 85%; /* Same as border for consistency */
+    --ring: 0 0% 25%; /* Darker ring for focus states */
+    --chart-1: 12 76% 55%; /* Slightly muted chart color */
+    --chart-2: 173 58% 35%; /* Softer green */
+    --chart-3: 197 37% 20%; /* Softer blue */
+    --chart-4: 43 74% 60%; /* Muted yellow */
+    --chart-5: 27 87% 60%; /* Muted orange */
+    --radius: 0.5rem; /* Consistent border radius */
+  }
+  .dark {
+    --background: 0 0% 10%; /* Darker for deep contrast */
+    --foreground: 0 0% 85%; /* Lighter for better readability */
+    --card: 0 0% 8%; /* Very dark for subtle contrast */
+    --card-foreground: 0 0% 95%; /* Bright for readability */
+    --popover: 0 0% 8%; /* Matches card */
+    --popover-foreground: 0 0% 95%; /* Consistent with card foreground */
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 0 0% 18%; /* Same as secondary */
+    --muted-foreground: 0 0% 60%; /* Mid-tone gray */
+    --accent: 0 0% 18%; /* Same as secondary */
+    --accent-foreground: 0 0% 95%; /* Bright for consistency */
+    --destructive: 0 65% 35%; /* Darker red */
+    --background: 0 0% 10%; /* Darker for deep contrast */
+    --foreground: 0 0% 85%; /* Lighter for better readability */
+    --card: 0 0% 8%; /* Very dark for subtle contrast */
+    --card-foreground: 0 0% 95%; /* Bright for readability */
+    --popover: 0 0% 8%; /* Matches card */
+    --popover-foreground: 0 0% 95%; /* Consistent with card foreground */
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 0 0% 18%; /* Same as secondary */
+    --muted-foreground: 0 0% 60%; /* Mid-tone gray */
+    --accent: 0 0% 18%; /* Same as secondary */
+    --accent-foreground: 0 0% 95%; /* Bright for consistency */
+    --destructive: 0 65% 35%; /* Darker red */
+    --destructive-foreground: 0 0% 95%; /* Bright for visibility */
+    --border: 0 0% 18%; /* Dark for subtle borders */
+    --input: 0 0% 18%; /* Same as border */
+    --ring: 0 0% 85%; /* Light for focus states */
+    --chart-1: 220 70% 50%; /* Vibrant blue */
+    --chart-2: 160 60% 40%; /* Balanced green */
+    --chart-3: 30 80% 50%; /* Muted yellow-orange */
+    --chart-4: 280 65% 55%; /* Balanced purple */
+    --chart-5: 340 75% 50%; /* Vibrant pink */
+    --border: 0 0% 18%; /* Dark for subtle borders */
+    --input: 0 0% 18%; /* Same as border */
+    --ring: 0 0% 85%; /* Light for focus states */
+    --chart-1: 220 70% 50%; /* Vibrant blue */
+    --chart-2: 160 60% 40%; /* Balanced green */
+    --chart-3: 30 80% 50%; /* Muted yellow-orange */
+    --chart-4: 280 65% 55%; /* Balanced purple */
+    --chart-5: 340 75% 50%; /* Vibrant pink */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
