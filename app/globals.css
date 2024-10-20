@@ -12,7 +12,7 @@
   }
 
   .section {
-    @apply mx-auto max-w-screen-xl px-6 py-20;
+    @apply mx-auto max-w-screen-xl px-10 py-20;
   }
 
   .bg-box {
@@ -25,6 +25,10 @@
 
   .underline-hover {
     @apply after:h-[1px] after:w-0 after:bg-primary after:transition-all after:duration-100 after:content-[''] hover:after:w-full;
+  }
+
+  .bg-blur {
+    @apply text-secondary-foreground backdrop-blur-md backdrop-brightness-125 dark:backdrop-brightness-90;
   }
 }
 

@@ -16,7 +16,10 @@ import Link from "next/link";
 
 const PortfolioSection = () => {
   return (
-    <section className="relative bg-background" id="portfolio">
+    <section
+      className="relative text-secondary-foreground backdrop-blur-md backdrop-brightness-125 dark:backdrop-brightness-90"
+      id="portfolio"
+    >
       <div className="flex min-h-[90vh] flex-col items-center justify-center gap-10 bg-box section">
         <header className="text-center">
           <TypoH2>Portfolio</TypoH2>

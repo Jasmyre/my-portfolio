@@ -126,8 +126,8 @@ const config: Config = {
           marginRight: "auto",
           paddingTop: "10rem",
           paddingBottom: "10rem",
-          paddingLeft: "1.5rem",
-          paddingRight: "1.5rem",
+          paddingLeft: "2.5rem",
+          paddingRight: "2.5rem",
         },
         ".darken-bg": {
           position: "relative",
@@ -160,6 +160,15 @@ const config: Config = {
           },
           "&:hover::after": {
             width: "100%",
+          },
+        },
+        ".blur-bg": {
+          color: "hsl(var(--secondary-foreground)",
+          WebkitBackdropFilter: "blur(12px) brightness(1.25)",
+          backdropFilter: "blur(12px) brightness(1.25) ",
+          "&.dark": {
+            WebkitBackdropFilter: "blur(12px) brightness(.9)",
+            backdropFilter: "blur(12px) brightness(.9)",
           },
         },
       };

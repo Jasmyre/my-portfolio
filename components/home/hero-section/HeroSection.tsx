@@ -1,6 +1,7 @@
 import React from "react";
 import { TypoH1, TypoP } from "@/components/Typography";
 import { Button } from "@/components/ui/button";
+import Link from 'next/link';
 
 export const HeroSectionBlissBrew = () => {
   return (
@@ -54,10 +55,12 @@ const HeroSection = () => {
         </div>
 
         <div className="flex gap-4 animate-[float-up_both_1s_ease] delay-1000 flex-wrap justify-center items-center">
-          <Button variant={"outline"} className="bg-transparent flex-1">
+          <Button variant={"outline"} className="bg-transparent flex-1" size={"lg"}>
             Download Resume
           </Button>
-          <Button variant={"default"} className="flex-1">View Portfolio</Button>
+          <Button asChild variant={"default"} className="flex-1" size={"lg"}>
+            <Link href={"#portfolio"}>View Portfolio</Link>
+          </Button>
         </div>
       </div>
     </section>
