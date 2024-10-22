@@ -14,6 +14,42 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 
+import Animated from '../../template/Animated';
+
+const projects: {
+  img: string;
+  title: string;
+  description: string;
+  badges: string[];
+  source: string;
+  preview: string;
+}[] = [
+  {
+    img: "/home/blissbrew.png",
+    title: "BlissBrew",
+    description: "A WebDesign for a coffee shop",
+    badges: ["Next.JS", "CSS"],
+    source: "https://github.com/Jasmyre/blissbrew",
+    preview: "https://blissbrew.vercel.app",
+  },
+  {
+    img: "/home/search4movies.png",
+    title: "Search4Movies",
+    description: `A movie search website made with TMDB API`,
+    badges: ["Next.JS", "CSS", "API"],
+    source: "https://github.com/Jasmyre/search4movies",
+    preview: "https://search4movies.vercel.app/",
+  },
+  {
+    img: "/home/scoopify.png",
+    title: "Scoopify",
+    description: `A WebDesign template for an ice cream shop`,
+    badges: ["HTML", "CSS", "JavaScript"],
+    source: "https://github.com/Jasmyre/Scoopify",
+    preview: "https://jasmyre.github.io/Scoopify",
+  },
+];
+
 const PortfolioSection = () => {
   return (
     <section
@@ -22,96 +58,54 @@ const PortfolioSection = () => {
     >
       <div className="flex min-h-[90vh] flex-col items-center justify-center gap-10 bg-box section">
         <header className="text-center">
-          <TypoH2>Portfolio</TypoH2>
-          <TypoMuted>View my previous designs and projects</TypoMuted>
+          <Animated>
+            <TypoH2>Portfolio</TypoH2>
+          </Animated>
+          <Animated>
+            <TypoMuted>View my previous designs and projects</TypoMuted>
+          </Animated>
         </header>
         <div className="grid-row-3 grid h-full w-full grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:gap-6">
-          <div className="group relative rounded-lg border object-cover object-center">
-            <Image
-              className="w-full rounded-lg"
-              src={"/home/blissbrew.png"}
-              alt={"my design1"}
-              width={500}
-              height={500}
-            ></Image>
-            <Card className="absolute left-0 top-0 hidden h-full max-h-full w-full flex-col group-hover:flex">
-              <CardHeader>
-                <CardTitle>BlissBrew</CardTitle>
-                <CardDescription className="">
-                  A WebDesign for a coffee shop
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="flex max-h-full flex-1 flex-wrap items-center justify-start gap-2 overflow-auto">
-                <Badge>Next.JS</Badge>
-                <Badge>CSS</Badge>
-              </CardContent>
-              <CardFooter className="flex justify-between">
-                <Button variant={"outline"}>Source code</Button>
-                <Button>Visit preview</Button>
-              </CardFooter>
-            </Card>
-          </div>
-
-          <div className="group relative rounded-lg border object-cover object-center">
-            <Image
-              className="w-full rounded-lg darken-bg"
-              src={"/home/search4movies.png"}
-              alt={"my design1"}
-              width={500}
-              height={500}
-            ></Image>
-            <Card className="absolute left-0 top-0 z-[9997] hidden h-full max-h-full w-full flex-col group-hover:flex">
-              <CardHeader>
-                <CardTitle>Search4Movies</CardTitle>
-                <CardDescription className="">
-                  A movie search website made with{" "}
-                  <Link
-                    className="text-primary underline"
-                    href={"https://www.themoviedb.org/"}
-                  >
-                    TMDB
-                  </Link>{" "}
-                  API
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="flex max-h-full flex-1 flex-wrap items-center justify-start gap-2 overflow-auto">
-                <Badge>Next.JS</Badge>
-                <Badge>CSS</Badge>
-                <Badge>API</Badge>
-              </CardContent>
-              <CardFooter className="flex justify-between">
-                <Button variant={"outline"}>Source code</Button>
-                <Button>Visit preview</Button>
-              </CardFooter>
-            </Card>
-          </div>
-
-          <div className="group relative rounded-lg border object-cover object-center">
-            <Image
-              className="w-full rounded-lg"
-              src={"/home/scoopify.png"}
-              alt={"my design1"}
-              width={500}
-              height={500}
-            ></Image>
-            <Card className="absolute left-0 top-0 hidden h-full max-h-full w-full flex-col group-hover:flex">
-              <CardHeader>
-                <CardTitle>Scoopify</CardTitle>
-                <CardDescription className="">
-                  A WebDesign template for an ice cream shop
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="flex max-h-full flex-1 flex-wrap items-center justify-start gap-2 overflow-auto">
-                <Badge>JS</Badge>
-                <Badge>HTML</Badge>
-                <Badge>CSS</Badge>
-              </CardContent>
-              <CardFooter className="flex justify-between">
-                <Button variant={"outline"}>Source code</Button>
-                <Button>Visit preview</Button>
-              </CardFooter>
-            </Card>
-          </div>
+          {
+            projects.map((project, i) => {
+              return (
+                  <Animated className="group relative rounded-lg border object-cover object-center" key={i}>
+                    <Image
+                      className="w-full h-full rounded-lg"
+                      src={project.img}
+                      alt={`${project.title}: ${project.description}`}
+                      width={325}
+                      height={100}
+                    ></Image>
+                    <Card className="absolute left-0 top-0 hidden h-full max-h-full w-full flex-col group-hover:flex">
+                      <CardHeader>
+                        <CardTitle>{project.title}</CardTitle>
+                        <CardDescription className="">
+                          {project.description}
+                        </CardDescription>
+                      </CardHeader>
+                      <CardContent className="flex max-h-full flex-1 flex-wrap items-center justify-start gap-2">
+                        {
+                          project.badges.map((badge, i) => {
+                            return (
+                              <Badge key={i}>{badge}</Badge>
+                            )
+                          })
+                        }
+                      </CardContent>
+                      <CardFooter className="flex justify-between">
+                        <Button asChild variant={"outline"}>
+                          <Link href={project.source}>Source Code</Link>
+                        </Button>
+                        <Button asChild>
+                          <Link href={project.preview}>Visit Prevew</Link>
+                        </Button>
+                      </CardFooter>
+                    </Card>
+                  </Animated>
+              );
+            })
+          }
         </div>
       </div>
     </section>

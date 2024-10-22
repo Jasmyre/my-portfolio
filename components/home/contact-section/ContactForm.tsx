@@ -72,7 +72,7 @@ const ContactForm = () => {
                         <FormLabel>Name</FormLabel>
                         <FormControl>
                           <Input
-                            placeholder="SpongeBob SquarePants"
+                            placeholder=" "
                             {...field}
                           />
                         </FormControl>
@@ -93,7 +93,7 @@ const ContactForm = () => {
                         <FormControl>
                           <Input
                             type="email"
-                            placeholder="spongebob@example.com"
+                            placeholder=" "
                             {...field}
                           />
                         </FormControl>
@@ -113,7 +113,7 @@ const ContactForm = () => {
                         <FormLabel>Message</FormLabel>
                         <FormControl>
                           <Textarea
-                            placeholder="Hello world!"
+                            placeholder=" "
                             {...field}
                             cols={50}
                             className="h-[150px]"
