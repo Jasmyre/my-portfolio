@@ -1,5 +1,7 @@
 import React from "react";
 
+import { Analytics } from "@vercel/analytics/react";
+
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -38,6 +40,16 @@ export const metadata: Metadata = {
     "jasmyre andrei portfolio",
     "jasmyre lanuza vercel",
     "jasmyre lanuza github",
+    "jasmyre portfolio",
+    "jasmyre andrei lanuza portfolio",
+    "jasmyre andrei lanuza vercel portfolio",
+    "vercel portfolio",
+    "andrei lanuza portfolio",
+    "andrei lanuza vercel portfolio",
+    "andrei",
+    "vercel",
+    "nextjs",
+    "portfolio"
   ],
   title: {
     default: "Jasmyre Lanuza",
@@ -84,6 +96,7 @@ export default function RootLayout({
           <FollowCursor />
           {children}
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
