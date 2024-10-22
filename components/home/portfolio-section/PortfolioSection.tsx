@@ -95,10 +95,10 @@ const PortfolioSection = () => {
                       </CardContent>
                       <CardFooter className="flex justify-between">
                         <Button asChild variant={"outline"}>
-                          <Link href={project.source}>Source Code</Link>
+                          <Link href={project.source} target="_blank">Source Code</Link>
                         </Button>
                         <Button asChild>
-                          <Link href={project.preview}>Visit Prevew</Link>
+                          <Link href={project.preview} target="_blank">Visit Prevew</Link>
                         </Button>
                       </CardFooter>
                     </Card>
