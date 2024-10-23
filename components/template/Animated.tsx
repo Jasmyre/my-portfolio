@@ -1,9 +1,8 @@
 "use client";
 
 import { useInView } from "react-intersection-observer";
-import { motion } from "framer-motion";
+import { motion, AnimationProps } from "framer-motion";
 import React, { ReactNode } from "react";
-import { AnimationProps } from "framer-motion";
 
 interface AnimatedProps {
     triggerOnce?: boolean;

@@ -3,9 +3,8 @@ import Link from "next/link";
 import HeaderNavButton from "@/components/template/header/HeaderNavButton";
 import Animated from "@/components/template/Animated";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
-import Image from "next/image";
+import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 
 interface FooterProps {
   children?: ReactNode;
@@ -23,7 +22,7 @@ const FooterSection = ({ children }: FooterProps) => {
           </h3>
         </div>
 
-        <div className="flex-1">
+        <div className="hidden flex-1 lg:block">
           <nav className="h-full">
             <ul className="flex h-full items-center justify-center gap-4">
               <li className="flex items-center justify-center max-lg:py-3">
@@ -60,7 +59,7 @@ const FooterSection = ({ children }: FooterProps) => {
             <Animated>
               <Button asChild size={"icon"} variant={"outline"}>
                 <Link href={"https://github.com/Jasmyre"}>
-                  <Github />
+                  <GitHubLogoIcon />
                 </Link>
               </Button>
             </Animated>
@@ -72,7 +71,7 @@ const FooterSection = ({ children }: FooterProps) => {
                     "https://www.linkedin.com/in/jasmyre-andrei-lanuza-092a972a1/?originalSubdomain=ph"
                   }
                 >
-                  <Linkedin />
+                  <LinkedInLogoIcon />
                 </Link>
               </Button>
             </Animated>
@@ -83,9 +82,11 @@ const FooterSection = ({ children }: FooterProps) => {
       <Separator />
 
       <div className="px-10">
-        <p className="text-center">
-          <Animated>&copy; 2024 Jasmyre Lanuza. All Rights Reserved.</Animated>
-        </p>
+        <Animated>
+          <p className="text-center">
+            &copy; 2024 Jasmyre Lanuza. All Rights Reserved.
+          </p>
+        </Animated>
       </div>
     </footer>
   );

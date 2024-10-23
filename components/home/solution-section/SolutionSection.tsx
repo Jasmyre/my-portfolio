@@ -2,7 +2,7 @@ import { TypoH2, TypoMuted } from "@/components/Typography";
 import React from "react";
 import { TypoH3, TypoP } from "../../Typography";
 import Image from "next/image";
-import Animated from '../../template/Animated';
+import Animated from "../../template/Animated";
 
 const SolutionSection = () => {
   return (
@@ -20,8 +20,8 @@ const SolutionSection = () => {
             <TypoMuted>My recipe for a good website</TypoMuted>
           </Animated>
         </header>
-        <article className="mt-20 flex flex-col max-sm:gap-[25vh] [&>div:nth-child(odd)]:lg:flex-row-reverse [&>div]:mx-auto [&>div]:min-h-[75vh] [&>div]:max-w-screen-lg">
-          <div className="flex flex-col gap-6 lg:flex-row [&>div]:flex-1">
+        <article className="mt-20 flex flex-col max-sm:gap-[25vh] [&>div:nth-child(odd)]:md:flex-row-reverse [&>div]:mx-auto [&>div]:min-h-[100vh] [&>div]:max-w-screen-lg [&>div]:lg:min-h-[75vh]">
+          <div className="flex flex-col md:flex-row md:gap-6 [&>div]:md:flex-1">
             <div className="flex items-center justify-center">
               <Animated>
                 <Image
@@ -51,7 +51,7 @@ const SolutionSection = () => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-6 lg:flex-row [&>div]:flex-1">
+          <div className="flex flex-col gap-6 md:flex-row [&>div]:md:flex-1">
             <div className="flex items-center justify-center">
               <Animated>
                 <Image
@@ -83,7 +83,7 @@ const SolutionSection = () => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-6 lg:flex-row [&>div]:flex-1">
+          <div className="flex flex-col gap-6 md:flex-row [&>div]:md:flex-1">
             <div className="flex items-center justify-center">
               <Animated>
                 <Image
@@ -114,7 +114,7 @@ const SolutionSection = () => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-6 lg:flex-row [&>div]:flex-1">
+          <div className="flex flex-col gap-6 md:flex-row [&>div]:md:flex-1">
             <div className="flex items-center justify-center">
               <Animated>
                 <Image

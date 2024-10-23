@@ -49,7 +49,14 @@ export const metadata: Metadata = {
     "andrei",
     "vercel",
     "nextjs",
-    "portfolio"
+    "portfolio",
+    "antipolo city, rizal, philippines",
+    "antipolo",
+    "antipolo city",
+    "rizal",
+    "calabarzon",
+    "philippines",
+    "asia",
   ],
   title: {
     default: "Jasmyre Lanuza",

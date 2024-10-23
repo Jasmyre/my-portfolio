@@ -65,11 +65,11 @@ const PortfolioSection = () => {
             <TypoMuted>View my previous designs and projects</TypoMuted>
           </Animated>
         </header>
-        <div className="grid-row-3 grid h-full w-full grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3 lg:gap-6">
+        <div className="grid-row-3 grid items-center justify-center h-full w-full grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
           {
-            projects.map((project, i) => {
+            projects.map((project) => {
               return (
-                  <Animated className="group relative rounded-lg border object-cover object-center" key={i}>
+                  <Animated className="group relative rounded-lg border object-cover object-center" key={project.title}>
                     <Image
                       className="w-full h-full rounded-lg"
                       src={project.img}
@@ -86,9 +86,9 @@ const PortfolioSection = () => {
                       </CardHeader>
                       <CardContent className="flex max-h-full flex-1 flex-wrap items-center justify-start gap-2">
                         {
-                          project.badges.map((badge, i) => {
+                          project.badges.map((badge) => {
                             return (
-                              <Badge key={i} className="text-white ">{badge}</Badge>
+                              <Badge key={badge} className="text-white ">{badge}</Badge>
                             )
                           })
                         }

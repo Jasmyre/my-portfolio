@@ -63,9 +63,9 @@ const AboutSection = () => {
               <Separator />
 
               <div className="flex flex-wrap gap-2 dark:[&>div]:text-white/75">
-                {badge.map((badge, i) => {
+                {badge.map((badge) => {
                   return (
-                    <Animated key={i}>
+                    <Animated key={badge}>
                       <Badge className="text-white">{badge}</Badge>
                     </Animated>
                   );
@@ -88,37 +88,37 @@ const AboutSection = () => {
             </Animated>
           </div>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-              <Animated className="flex flex-col gap-4 rounded border bg-background p-10 max-[350px]:p-2">
-                <div>
-                  <TypoMuted className="flex items-center justify-between">
-                    <span>Senior High School</span>
-                    <span>2023-2025</span>
-                  </TypoMuted>
-                  <TypoLarge>
-                    Sumulong College of Arts and Sciences - Antipolo City
-                  </TypoLarge>
-                </div>
+            <Animated className="flex flex-col gap-4 rounded border bg-background p-10 max-[350px]:p-2">
+              <div>
+                <TypoMuted className="flex items-center justify-between">
+                  <span>Senior High School</span>
+                  <span>2023-2025</span>
+                </TypoMuted>
+                <TypoLarge>
+                  Sumulong College of Arts and Sciences - Antipolo City
+                </TypoLarge>
+              </div>
 
-                <div>
-                  <TypoLead>
-                    Information Communication and Technologies (ICT)
-                  </TypoLead>
-                </div>
-              </Animated>
-              
-              <Animated className="flex flex-col gap-4 rounded border bg-background p-10">
-                <div>
-                  <TypoMuted className="flex items-center justify-between">
-                    <span>Junior High School</span>
-                    <span>2019-2023</span>
-                  </TypoMuted>
-                  <TypoLarge>
-                    San Roque National High School - Antipolo City
-                  </TypoLarge>
-                </div>
+              <div>
+                <TypoLead>
+                  Information Communication and Technologies (ICT)
+                </TypoLead>
+              </div>
+            </Animated>
 
-                <div></div>
-              </Animated>
+            <Animated className="flex flex-col gap-4 rounded border bg-background p-10">
+              <div>
+                <TypoMuted className="flex items-center justify-between">
+                  <span>Junior High School</span>
+                  <span>2019-2023</span>
+                </TypoMuted>
+                <TypoLarge>
+                  San Roque National High School - Antipolo City
+                </TypoLarge>
+              </div>
+
+              <div></div>
+            </Animated>
           </div>
         </div>
       </div>
