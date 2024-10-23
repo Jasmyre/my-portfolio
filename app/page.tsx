@@ -5,6 +5,7 @@ import AboutSection from "../components/home/about-section/AboutSection";
 import SolutionSection from "@/components/home/solution-section/SolutionSection";
 import PortfolioSection from "@/components/home/portfolio-section/PortfolioSection";
 import ContactSection from '@/components/home/contact-section/ContactSection';
+import FooterSection from '../components/home/footer-section/FooterSection';
 
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
       <SolutionSection />
       <PortfolioSection />
       <ContactSection />
+      <FooterSection>Jasmyre Lanuza</FooterSection>
     </main>
   );
 };

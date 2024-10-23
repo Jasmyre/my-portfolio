@@ -88,7 +88,7 @@ const PortfolioSection = () => {
                         {
                           project.badges.map((badge, i) => {
                             return (
-                              <Badge key={i}>{badge}</Badge>
+                              <Badge key={i} className="text-white ">{badge}</Badge>
                             )
                           })
                         }

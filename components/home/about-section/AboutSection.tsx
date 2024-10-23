@@ -66,7 +66,7 @@ const AboutSection = () => {
                 {badge.map((badge, i) => {
                   return (
                     <Animated key={i}>
-                      <Badge>{badge}</Badge>
+                      <Badge className="text-white">{badge}</Badge>
                     </Animated>
                   );
                 })}

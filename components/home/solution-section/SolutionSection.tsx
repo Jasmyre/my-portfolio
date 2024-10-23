@@ -7,9 +7,9 @@ import Animated from '../../template/Animated';
 const SolutionSection = () => {
   return (
     <section className="relative" id="solution">
-      <div className="absolute bottom-[25%] left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-primary opacity-20 blur-[100px]"></div>
-      <div className="absolute bottom-[25%] right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-primary opacity-20 blur-[100px] max-md:hidden"></div>
-      <div className="absolute bottom-0 left-0 top-[25%] -z-10 m-auto h-[310px] w-[310px] rounded-full bg-primary opacity-20 blur-[100px] max-md:hidden"></div>
+      <div className="absolute bottom-[25%] left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-primary/50 opacity-20 blur-[100px]"></div>
+      <div className="absolute bottom-[25%] right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-primary/50 opacity-20 blur-[100px] max-md:hidden"></div>
+      <div className="absolute bottom-0 left-0 top-[25%] -z-10 m-auto h-[310px] w-[310px] rounded-full bg-primary/50 opacity-20 blur-[100px] max-md:hidden"></div>
       <div className="bg-box section">
         <header className="text-center">
           <Animated>

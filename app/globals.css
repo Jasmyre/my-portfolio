@@ -16,11 +16,11 @@
   }
 
   .bg-box {
-    @apply border-x bg-[linear-gradient(to_right,_hsl(var(--border))_1px,_transparent_1px),_linear-gradient(to_bottom,_hsl(var(--border))_1px,_transparent_1px)] bg-[length:200px_200px] bg-center;
+    @apply border-x-[#99999950] dark:border-x-[#99999915] bg-[linear-gradient(to_right,_#99999950_1px,_transparent_1px),_linear-gradient(to_bottom,_#99999950_1px,_transparent_1px)] dark:bg-[linear-gradient(to_right,_#99999915_1px,_transparent_1px),_linear-gradient(to_bottom,_#99999915_1px,_transparent_1px)] bg-[length:200px_200px] bg-center;
   }
 
   .darken-bg {
-    @apply relative after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-[rgba(0,_0,_0,_0.25)] after:content-[''] dark:after:bg-[rgba(0,_0,_0,_0.75)];
+    @apply relative after:-z-10 after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-[rgba(0,_0,_0,_0.25)] after:content-[''] dark:after:bg-[rgba(0,_0,_0,_0.75)];
   }
 
   .underline-hover {

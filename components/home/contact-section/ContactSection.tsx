@@ -5,13 +5,16 @@ import ContactForm from "./ContactForm";
 import { Mail, Phone, Github, Linkedin } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import Animated from '../../template/Animated';
+import Animated from "../../template/Animated";
 
 const ContactSection = () => {
   return (
     <section className="relative" id="contact">
-      <div className="container flex h-[90vh] min-h-[90vh] flex-col gap-10 bg-box section">
-        <div className="flex h-full flex-col gap-10 lg:flex-row">
+      <div className="absolute bottom-[25%] left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-primary/50 opacity-20 blur-[100px]"></div>
+      <div className="absolute bottom-[25%] right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-primary/50 opacity-20 blur-[100px] max-md:hidden"></div>
+      {/* <div className="absolute bottom-0 left-0 top-[25%] -z-10 m-auto h-[310px] w-[310px] rounded-full bg-primary/50 opacity-20 blur-[100px] max-md:hidden"></div> */}
+      <div className="container flex min-h-[90vh] flex-col items-center justify-center gap-10 bg-box section">
+        <div className="flex h-full w-full flex-col gap-10 lg:flex-row">
           <div className="flex h-full flex-1 flex-col justify-center gap-4">
             <div className="py-4">
               <Animated>
