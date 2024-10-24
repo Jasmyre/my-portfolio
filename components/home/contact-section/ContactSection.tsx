@@ -1,11 +1,9 @@
 import React from "react";
 
 import { TypoLarge, TypoH1 } from "../../Typography";
+import { EnvelopeClosedIcon } from "@radix-ui/react-icons";
+import { MapPin } from "lucide-react";
 import ContactForm from "./ContactForm";
-import { Phone } from "lucide-react";
-import { GitHubLogoIcon, LinkedInLogoIcon, EnvelopeClosedIcon } from "@radix-ui/react-icons";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import Animated from "../../template/Animated";
 
 const ContactSection = () => {
@@ -35,8 +33,8 @@ const ContactSection = () => {
               <div>
                 <Animated>
                   <TypoLarge className="flex gap-4 items-center">
-                    <Phone />
-                    +63 987 - 654 - 32
+                    <MapPin />
+                    Antipolo City, Rizal, Philippines
                   </TypoLarge>
                 </Animated>
               </div>
