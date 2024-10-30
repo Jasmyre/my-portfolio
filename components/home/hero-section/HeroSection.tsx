@@ -40,7 +40,7 @@ const HeroSection = () => {
         <div className="flex flex-col gap-2">
           <Animated>
             <TypoH1>
-              Minimalist <strong className="text-primary">Web Designer</strong>{" "}
+              Minimalist <strong className="text-primary">Web Designer</strong>
               & <strong className="text-primary">Programmer</strong>
             </TypoH1>
           </Animated>

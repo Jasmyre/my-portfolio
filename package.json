@@ -1,9 +1,9 @@
 {
-  "name": "my-library",
-  "version": "0.1.0",
+  "name": "my-portfolio",
+  "version": "1.0.1",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
