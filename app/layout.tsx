@@ -1,4 +1,4 @@
-import React from "react";
+import { ReactNode } from "react";
 
 import { Analytics } from "@vercel/analytics/react";
 
@@ -7,7 +7,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 import { ThemeProvider } from "@/components/theme-provider";
-import FollowCursor from "../components/FollowCursur";
+import FollowCursor from "../components/FollowCursor";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -21,18 +21,18 @@ const geistMono = localFont({
 });
 
 const BASE_URL =
-  process.env.BASE_URL || "err:Envronment_'BASE_URL'_Variable_Is_Not_Defined";
+  process.env.BASE_URL ?? "err:Environment_'BASE_URL'_Variable_Is_Not_Defined";
 
 const GOOGLE_SITE_VERIFICATION =
-  process.env.GOOGLE_SITE_VERIFICATION ||
-  "err:Envronment_'GOOGLE_SITE_VERIFICATION'_Variable_Is_Not_Defined";
+  process.env.GOOGLE_SITE_VERIFICATION ??
+  "err:Environment_'GOOGLE_SITE_VERIFICATION'_Variable_Is_Not_Defined";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   keywords: [
     "jasmyre",
     "lanuza",
-    "jasmyree lanuza",
+    "jasmyre lanuza",
     "jasmyre review",
     "jasmyre lanuza facebook",
     "jasmyre andrei",
@@ -88,7 +88,7 @@ console.log(GOOGLE_SITE_VERIFICATION);
 
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+}: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
