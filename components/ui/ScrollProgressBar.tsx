@@ -37,7 +37,7 @@ export default function ScrollProgressBar({
   if (type === "bar") {
     return (
       <div
-        className="end-05 pointer-events-none fixed start-0 top-0 z-[99999999999999999999999999999999999999999999999] backdrop-filter-none"
+        className="end-05 pointer-events-none fixed start-0 top-0 z-[147483647] backdrop-filter-none"
         style={{ height: `${strokeSize + 2}px` }}
       >
         <span
@@ -54,7 +54,7 @@ export default function ScrollProgressBar({
   return (
     <div
       className={cn(
-        "fixed z-[99999999999999999999999999999999999999999999999] flex items-center justify-center backdrop-filter-none",
+        "fixed z-[147483647] flex items-center justify-center backdrop-filter-none",
         {
           "end-0 top-0": position === "top-right",
           "bottom-0 end-0": position === "bottom-right",
