@@ -7,9 +7,9 @@ import Animated from "../../template/Animated";
 const SolutionSection = () => {
   return (
     <section className="relative" id="solution">
-      <div className="absolute bottom-[25%] left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-primary/50 opacity-20 blur-[100px]"></div>
-      <div className="absolute bottom-[25%] right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-primary/50 opacity-20 blur-[100px] max-md:hidden"></div>
-      <div className="absolute bottom-0 left-0 top-[25%] -z-10 m-auto h-[310px] w-[310px] rounded-full bg-primary/50 opacity-20 blur-[100px] max-md:hidden"></div>
+      <div className="absolute bottom-[25%] left-0 right-0 top-0 -z-10 m-auto hidden h-[310px] w-[310px] rounded-full bg-primary/50 opacity-20 blur-[100px] dark:block"></div>
+      <div className="absolute bottom-[25%] right-0 top-0 -z-10 m-auto hidden h-[310px] w-[310px] rounded-full bg-primary/50 opacity-20 blur-[100px] dark:block max-md:hidden"></div>
+      <div className="absolute bottom-0 left-0 top-[25%] -z-10 m-auto hidden h-[310px] w-[310px] rounded-full bg-primary/50 opacity-20 blur-[100px] dark:block max-md:hidden"></div>
       <div className="bg-box section">
         <header className="text-center">
           <Animated>
@@ -36,7 +36,7 @@ const SolutionSection = () => {
             <div className="flex flex-col items-start justify-center">
               <Animated>
                 <TypoH3>Design</TypoH3>
-                <TypoP className="text-justify">
+                <TypoP className="mt-2 text-justify text-muted-foreground">
                   While creating a design, emphasis is laid on aesthetics and
                   functionality to create an attractive, easy-to-use interface.
                   Some qualities allow a brand to be represented efficiently,
@@ -66,7 +66,7 @@ const SolutionSection = () => {
             <div className="flex flex-col items-start justify-center">
               <Animated>
                 <TypoH3>User experience (UX)</TypoH3>
-                <TypoP className="text-justify">
+                <TypoP className="mt-2 text-justify text-muted-foreground">
                   A user experience that has been thought out properly is
                   oriented toward helping users fulfill their needs and reach
                   their goals with no distractions. It should include a simple
@@ -98,7 +98,7 @@ const SolutionSection = () => {
             <div className="flex flex-col items-start justify-center">
               <Animated>
                 <TypoH3>Responsive & Interactive</TypoH3>
-                <TypoP className="text-justify">
+                <TypoP className="mt-2 text-justify text-muted-foreground">
                   Responsive and interactive design makes websites capable of
                   adapting to all kinds of devices, can provide the best viewing
                   experience irrespective of whether users are using desktops,
@@ -129,7 +129,7 @@ const SolutionSection = () => {
             <div className="flex flex-col items-start justify-center">
               <Animated>
                 <TypoH3>Search engine optimization (SEO)</TypoH3>
-                <TypoP className="text-justify">
+                <TypoP className="mt-2 text-justify text-muted-foreground">
                   Search Engine Optimization is a strategy used primarily to
                   enhance the visibility of websites on search engines, e.g.,
                   Google. With an increased amount of keyword usage, site

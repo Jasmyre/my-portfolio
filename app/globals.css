@@ -16,7 +16,7 @@
   }
 
   .bg-box {
-    @apply border-x-[#99999950] dark:border-x-[#99999915] bg-[linear-gradient(to_right,_#99999950_1px,_transparent_1px),_linear-gradient(to_bottom,_#99999950_1px,_transparent_1px)] dark:bg-[linear-gradient(to_right,_#99999915_1px,_transparent_1px),_linear-gradient(to_bottom,_#99999915_1px,_transparent_1px)] bg-[length:200px_200px] bg-center;
+    @apply border-x-[#99999920] dark:border-x-[#99999915] bg-[linear-gradient(to_right,_#99999920_1px,_transparent_1px),_linear-gradient(to_bottom,_#99999920_1px,_transparent_1px)] dark:bg-[linear-gradient(to_right,_#99999915_1px,_transparent_1px),_linear-gradient(to_bottom,_#99999915_1px,_transparent_1px)] bg-[length:200px_200px] bg-center;
   }
 
   .darken-bg {

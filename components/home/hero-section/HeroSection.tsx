@@ -29,9 +29,9 @@ export const HeroSectionBlissBrew = () => {
 const HeroSection = () => {
   return (
     <section id="Hero_section" className="scroll-m-20 border-b bg-box">
-      <div className="absolute bottom-[25%] left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-primary/50 opacity-20 blur-[100px]"></div>
-      <div className="absolute bottom-[25%] right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-primary/50 opacity-20 blur-[100px] max-md:hidden"></div>
-      <div className="absolute bottom-0 left-0 top-[25%] -z-10 m-auto h-[310px] w-[310px] rounded-full bg-primary/50 opacity-20 blur-[100px] max-md:hidden"></div>
+      <div className="absolute bottom-[25%] left-0 right-0 top-0 -z-10 m-auto hidden h-[310px] w-[310px] rounded-full bg-primary/50 opacity-20 blur-[100px] dark:block"></div>
+      <div className="absolute bottom-[25%] right-0 top-0 -z-10 m-auto hidden h-[310px] w-[310px] rounded-full bg-primary/50 opacity-20 blur-[100px] dark:block max-md:hidden"></div>
+      <div className="absolute bottom-0 left-0 top-[25%] -z-10 m-auto hidden h-[310px] w-[310px] rounded-full bg-primary/50 opacity-20 blur-[100px] dark:block max-md:hidden"></div>
 
       <div
         id="hero_section_wrapper"
@@ -40,8 +40,8 @@ const HeroSection = () => {
         <div className="flex flex-col gap-2">
           <Animated>
             <TypoH1>
-              Minimalist <strong className="text-primary">Web Designer</strong>
-              & <strong className="text-primary">Programmer</strong>
+              Minimalist <strong className="text-primary">Web Designer</strong>&{" "}
+              <strong className="text-primary">Programmer</strong>
             </TypoH1>
           </Animated>
 

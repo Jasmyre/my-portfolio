@@ -6,6 +6,7 @@ import {
   TypoMuted,
   TypoLarge,
   TypoH2,
+  TypoH3,
 } from "../../Typography";
 import { Separator } from "../../ui/separator";
 import { Badge } from "@/components/ui/badge";
@@ -27,7 +28,7 @@ const badge: string[] = [
 const AboutSection = () => {
   return (
     <section
-      className="bg-Backgroud w-full border-b text-secondary-foreground backdrop-blur-md backdrop-brightness-125 dark:backdrop-brightness-90"
+      className="w-full border-b text-secondary-foreground backdrop-blur-md backdrop-brightness-125 dark:backdrop-brightness-90"
       id="about"
     >
       <div className="flex flex-col gap-6 section md:bg-box">
@@ -48,11 +49,11 @@ const AboutSection = () => {
             <div className="flex flex-col gap-2">
               <div>
                 <Animated>
-                  <TypoLead>About Me</TypoLead>
+                  <TypoH3>About Me</TypoH3>
                 </Animated>
 
                 <Animated>
-                  <TypoP>
+                  <TypoP className="mt-2 text-muted-foreground">
                     I&apos;m a web designer and programmer with a focus on
                     creating minimal and functional websites that enhance user
                     experience.

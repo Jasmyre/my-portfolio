@@ -8,6 +8,7 @@ import "./globals.css";
 
 import { ThemeProvider } from "@/components/theme-provider";
 import FollowCursor from "../components/FollowCursor";
+import ScrollProgressBar from "@/components/ui/ScrollProgressBar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -101,6 +102,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <FollowCursor />
+          <ScrollProgressBar showPercentage />
           {children}
         </ThemeProvider>
         <Analytics />
