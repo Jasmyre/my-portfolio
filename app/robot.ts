@@ -3,7 +3,7 @@ import { MetadataRoute } from "next";
 export default function robots(): MetadataRoute.Robots {
   // Base Uniform Resource Locator
   const BASE_URL =
-    process.env.BASE_URL ?? "err:Envronment_Variable_Is_Not_Defined";
+    process.env.BASE_URL ?? "err:Environment_Variable_Is_Not_Defined";
 
   return {
     rules: {

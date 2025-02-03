@@ -1,9 +1,7 @@
-import React from "react";
 import { TypoH1, TypoP } from "@/components/Typography";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Animated from "../../template/Animated";
-import { BackgroundLines } from "@/components/ui/background-lines";
 
 export const HeroSectionBlissBrew = () => {
   return (
@@ -30,7 +28,7 @@ export const HeroSectionBlissBrew = () => {
 const HeroSection = () => {
   return (
     <section id="Hero_section" className="scroll-m-20 border-b bg-box">
-      <BackgroundLines className="bg-transparent dark:bg-transparent">
+      <div className="bg-transparent dark:bg-transparent">
         <div className="absolute bottom-[25%] left-0 right-0 top-0 -z-10 m-auto hidden h-[310px] w-[310px] rounded-full bg-primary/50 opacity-20 blur-[100px] dark:block"></div>
         <div className="absolute bottom-[25%] right-0 top-0 -z-10 m-auto hidden h-[310px] w-[310px] rounded-full bg-primary/50 opacity-20 blur-[100px] dark:block max-md:hidden"></div>
         <div className="absolute bottom-0 left-0 top-[25%] -z-10 m-auto hidden h-[310px] w-[310px] rounded-full bg-primary/50 opacity-20 blur-[100px] dark:block max-md:hidden"></div>
@@ -77,7 +75,7 @@ const HeroSection = () => {
             </Animated>
           </div>
         </div>
-      </BackgroundLines>
+      </div>
     </section>
   );
 };

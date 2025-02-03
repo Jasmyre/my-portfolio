@@ -7,8 +7,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 import { ThemeProvider } from "@/components/theme-provider";
-import FollowCursor from "../components/FollowCursor";
 import ScrollProgressBar from "@/components/ui/ScrollProgressBar";
+import FollowCursor from "../components/FollowCursor";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -103,7 +103,7 @@ export default function RootLayout({
         >
           <FollowCursor />
           <ScrollProgressBar showPercentage />
-          {children}
+          <main className="w-full">{children}</main>
         </ThemeProvider>
         <Analytics />
       </body>
